@@ -88,6 +88,7 @@ let getthought = document.getElementById("thought"); */
 let getQuote = document.getElementById("thought");
 
 let displayQuote = function showQuote() {
+  userCardContainer.innerHTML = "";
   fetch("https://api.quotable.io/random")
     .then((res) => res.json())
     .then((data) => {
@@ -96,7 +97,7 @@ let displayQuote = function showQuote() {
       const quoteAuthor = card.querySelector("[data-body");
       quoteText.textContent = data.content;
       quoteAuthor.textContent = data.author;
-      userCardContainer.appendChild(card);
+      userCardContainer.append(card);
     });
 };
 
