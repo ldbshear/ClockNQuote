@@ -96,7 +96,7 @@ let displayQuote = function showQuote() {
       const quoteAuthor = card.querySelector("[data-body");
       quoteText.textContent = data.content;
       quoteAuthor.textContent = data.author;
-      userCardContainer.append(card);
+      userCardContainer.appendChild(card);
     });
 };
 
