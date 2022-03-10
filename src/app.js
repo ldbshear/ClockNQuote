@@ -1,7 +1,15 @@
 function digitalClock() {
   let kidClock = new Date();
   let day = kidClock.getDay();
-  let week = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+  let week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   day = week[kidClock.getDay()];
   let date = kidClock.getDate();
   let month = kidClock.getMonth();
@@ -28,6 +36,10 @@ function digitalClock() {
 
   let displayTime = document.querySelector(".hourMins");
   let displayDate = document.querySelector(".dayMonthYear");
+
+  if (twelveHours === 0 || twelveHours === 12) {
+    twelveHours = 12;
+  }
 
   if (twelveHours > 12) {
     twelveHours = twelveHours - 12;
