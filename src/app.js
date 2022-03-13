@@ -1,3 +1,9 @@
+//Possibly adding an object here to display time phrases
+const timePhrases = {
+  quarterTo: "Also called, a quarter to",
+};
+
+//Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();
   let day = kidClock.getDay();
@@ -37,6 +43,7 @@ function digitalClock() {
   let displayTime = document.querySelector(".hourMins");
   let displayDate = document.querySelector(".dayMonthYear");
 
+  //These next several if statements display time in a 12 hour format.
   if (twelveHours === 0 || twelveHours === 12) {
     twelveHours = 12;
   }
@@ -81,21 +88,6 @@ function setRotation(element, rotationRatio) {
 const userCardTemplate = document.querySelector("[data-user-template]");
 
 const userCardContainer = document.querySelector("[data-user-cards-container]");
-
-/* fetch("https://api.quotable.io/random")
-  .then((res) => res.json())
-  .then((data) => {
-    data.forEach((user) => {
-      const card = userCardTemplate.content.cloneNode(true).children[0];
-      const quoteText = card.querySelector("[data-header");
-      const quoteAuthor = card.querySelector("[data-body");
-      quoteText.textContent = user.content;
-      quoteAuthor.textContent = user.author;
-      userCardContainer.append(card);
-    });
-  });
-
-let getthought = document.getElementById("thought"); */
 
 let getQuote = document.getElementById("thought");
 
