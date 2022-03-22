@@ -90,31 +90,37 @@ function helpfulClock() {
   if (helpMins === 0) {
     extraHelp.innerHTML = `${helpHours}:${helpMins} is ${helpHours} o'clock`;
   } else if (helpMins === 5) {
-    `${helpHours}:${helpMins} is also five past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also five past the hour of ${helpHours}`;
   } else if (helpMins === 10) {
-    `${helpHours}:${helpMins} is also ten past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also ten past the hour of ${helpHours}`;
   } else if (helpMins === 15) {
-    `${helpHours}:${helpMins} is also a quarter past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also a quarter past the hour of ${helpHours}`;
   } else if (helpMins === 20) {
-    `${helpHours}:${helpMins} is also twenty past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also twenty past the hour of ${helpHours}`;
   } else if (helpMins === 25) {
-    `${helpHours}:${helpMins} is also twenty-five past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also twenty-five past the hour of ${helpHours}`;
   } else if (helpMins === 30) {
-    `${helpHours}:${helpMins} is also half past the hour. What hour? The hour of ${helpHours}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also half past the hour. What hour? The hour of ${helpHours}`;
   } else if (helpMins === 35) {
-    `${helpHours}:${helpMins} is also twenty-five to the hour of ${
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also twenty-five to the hour of ${
       helpHours + 1
     }`;
   } else if (helpMins === 40) {
-    `${helpHours}:${helpMins} is also twenty to the hour of ${helpHours + 1}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also twenty to the hour of ${
+      helpHours + 1
+    }`;
   } else if (helpMins === 45) {
-    `${helpHours}:${helpMins} is also a quarter to the hour of ${
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also a quarter to the hour of ${
       helpHours + 1
     }`;
   } else if (helpMins === 50) {
-    `${helpHours}:${helpMins} is also ten to the hour of ${helpHours + 1}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also ten to the hour of ${
+      helpHours + 1
+    }`;
   } else if (helpMins === 55) {
-    `${helpHours}:${helpMins} is also five to the hour of ${helpHours + 1}`;
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is also five to the hour of ${
+      helpHours + 1
+    }`;
   } else {
     extraHelp.innerHTML = "";
   }
