@@ -1,8 +1,18 @@
+h1,
+h2,
+h3 {
+  color: #65a0b8;
+}
 body {
   min-height: 100vh;
-  background-image: url("../images/annie-spratt-pKpipZVVEC0-unsplash.jpg");
-  background-position: center;
+  background-color: #bcd6e0;
+  margin: 0;
+  overflow-x: hidden;
+  /* background-image: url("../images/annie-spratt-pKpipZVVEC0-unsplash.jpg");
+  background-position: center; */
   color: #373d4f;
+  font-size: 30px;
+  font-weight: 600;
 }
 
 a {
@@ -12,12 +22,12 @@ a {
 
 .clockBody,
 .clockBorder {
-  background-color: #99c0d0;
+  background-color: #f0f5f8;
 }
 
 .clock {
-  width: 350px;
-  height: 350px;
+  width: 400px;
+  height: 400px;
   background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   border-radius: 50%;
   border: 15px outset #a3c6ba;
@@ -94,11 +104,6 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-html, 
-body {
-  margin: 0;
-  overflow-x: hidden;
-}
 
 .clock .hand.second {
   width: 3px;
@@ -116,4 +121,8 @@ body {
   width: 10px;
   height: 35%;
   background-color: black;
+}
+
+.timeHints {
+  padding: 10px;
 }
