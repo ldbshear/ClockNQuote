@@ -1,8 +1,3 @@
-//Possibly adding an object here to display time phrases
-const timePhrases = {
-  quarterTo: "Also called, a quarter to",
-};
-
 //Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();
@@ -85,15 +80,44 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty("--rotation", rotationRatio * 360);
 }
 
-const helpWithTime = new Date();
-let helpHours = helpWithTime.getHours();
-let helpMins = helpWithTime.getMinutes();
-console.log(`${helpMins} is o clock`);
-console.log("hello");
-let extraHelp = document.getElementById("extraHelp");
-//extraHelp.innerHTML = `${helpMins} is o clock`;
-if (helpMins === 8) {
-  extraHelp.innerHTML = `${helpMins} is O'clock`;
+let helpInterval = setInterval(helpfulClock, 1000);
+function helpfulClock() {
+  const helpWithTime = new Date();
+  let helpHours = helpWithTime.getHours();
+  let helpMins = helpWithTime.getMinutes();
+  let extraHelp = document.getElementById("extraHelp");
+  
+  if (helpMins === 0) {
+    extraHelp.innerHTML = `${helpHours}:${helpMins} is ${helpHours} o'clock`;
+  } else if (helpMins === 5) {
+    `${helpHours}:${helpMins} is also five past the hour of ${helpHours}`;
+  } else if (helpMins === 10) {
+    `${helpHours}:${helpMins} is also ten past the hour of ${helpHours}`;
+  } else if (helpMins === 15) {
+    `${helpHours}:${helpMins} is also a quarter past the hour of ${helpHours}`;
+  } else if (helpMins === 20) {
+    `${helpHours}:${helpMins} is also twenty past the hour of ${helpHours}`;
+  } else if (helpMins === 25) {
+    `${helpHours}:${helpMins} is also twenty-five past the hour of ${helpHours}`;
+  } else if (helpMins === 30) {
+    `${helpHours}:${helpMins} is also half past the hour. What hour? The hour of ${helpHours}`;
+  } else if (helpMins === 35) {
+    `${helpHours}:${helpMins} is also twenty-five to the hour of ${
+      helpHours + 1
+    }`;
+  } else if (helpMins === 40) {
+    `${helpHours}:${helpMins} is also twenty to the hour of ${helpHours + 1}`;
+  } else if (helpMins === 45) {
+    `${helpHours}:${helpMins} is also a quarter to the hour of ${
+      helpHours + 1
+    }`;
+  } else if (helpMins === 50) {
+    `${helpHours}:${helpMins} is also ten to the hour of ${helpHours + 1}`;
+  } else if (helpMins === 55) {
+    `${helpHours}:${helpMins} is also five to the hour of ${helpHours + 1}`;
+  } else {
+    extraHelp.innerHTML = "";
+  }
 }
 
 const userCardTemplate = document.querySelector("[data-user-template]");
