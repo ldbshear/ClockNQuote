@@ -87,10 +87,18 @@ function helpfulClock() {
   let helpMins = helpWithTime.getMinutes();
   let extraHelp = document.getElementById("extraHelp");
 
+  if (helpHours === 0) {
+    helpHours = 12;
+  }
+
+  if (helpHours > 12) {
+    helpHours = helpHours - 12;
+  }
+
   if (helpMins === 0) {
     extraHelp.innerHTML = `${helpHours}:${helpMins} is ${helpHours} o'clock`;
   } else if (helpMins === 5) {
-    extraHelp.innerHTML = `${helpHours}:${helpMins} is also five past the hour of ${helpHours}`;
+    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}. You can also say it is five past the hour. Or five minutes past the hour of ${helpHours}.`;
   } else if (helpMins === 10) {
     extraHelp.innerHTML = `${helpHours}:${helpMins} is also ten past the hour of ${helpHours}`;
   } else if (helpMins === 15) {
@@ -110,15 +118,15 @@ function helpfulClock() {
       helpHours + 1
     }`;
   } else if (helpMins === 45) {
-    extraHelp.innerHTML = `${helpHours}:${helpMins} is also a quarter to the hour of ${
+    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}. You can say it is a quarter till. A quarter till the hour of ${
       helpHours + 1
     }`;
   } else if (helpMins === 50) {
-    extraHelp.innerHTML = `${helpHours}:${helpMins} is also ten to the hour of ${
+    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}. You can say it is ten to the hour of ${
       helpHours + 1
     }`;
   } else if (helpMins === 55) {
-    extraHelp.innerHTML = `${helpHours}:${helpMins} is also five to the hour of ${
+    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}. You can say it is five to the hour of ${
       helpHours + 1
     }`;
   } else {
