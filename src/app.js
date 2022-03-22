@@ -99,7 +99,6 @@ function helpfulClock() {
     helpMins = "0" + helpMins;
   }
 
-  console.log(helpMins);
   if (helpMins === 0) {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is ${helpHours} o'clock`;
   } else if (helpMins === "05") {
