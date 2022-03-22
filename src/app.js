@@ -86,7 +86,7 @@ function helpfulClock() {
   let helpHours = helpWithTime.getHours();
   let helpMins = helpWithTime.getMinutes();
   let extraHelp = document.getElementById("extraHelp");
-  
+
   if (helpMins === 0) {
     extraHelp.innerHTML = `${helpHours}:${helpMins} is ${helpHours} o'clock`;
   } else if (helpMins === 5) {
