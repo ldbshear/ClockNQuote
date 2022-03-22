@@ -85,6 +85,17 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty("--rotation", rotationRatio * 360);
 }
 
+const helpWithTime = new Date();
+let helpHours = helpWithTime.getHours();
+let helpMins = helpWithTime.getMinutes();
+console.log(`${helpMins} is o clock`);
+console.log("hello");
+let extraHelp = document.getElementById("extraHelp");
+//extraHelp.innerHTML = `${helpMins} is o clock`;
+if (helpMins === 8) {
+  extraHelp.innerHTML = `${helpMins} is O'clock`;
+}
+
 const userCardTemplate = document.querySelector("[data-user-template]");
 
 const userCardContainer = document.querySelector("[data-user-cards-container]");
