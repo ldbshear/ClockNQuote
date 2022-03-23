@@ -1,3 +1,8 @@
+//toggle color modes
+document.querySelector("#dark").addEventListener("click", () => {
+  document.body.classList.toggle("night");
+});
+
 //Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();

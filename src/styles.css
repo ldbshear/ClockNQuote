@@ -1,28 +1,61 @@
 h1,
 h2,
 h3 {
-  color: #65a0b8;
+  color: var(--heading-color);
 }
 body {
+  --background-color: #bcd6e0;
+  --text-color: #373d4f;
+  --heading-color: #65a0b8;
+  --clock-border-color: #a3c6ba;
+  --clock-body-color: #f0f5f8;
+  --clock-face-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  --clock-numbers-color: #373d4f;
+  --clockHand-background-color: black;
+  --clockSecondHand-background-color: red;
+  --transition-delay: 1s;
   min-height: 100vh;
-  background-color: #bcd6e0;
+  background-color: var(--background-color);
   margin: 0;
   overflow-x: hidden;
   /* background-image: url("../images/annie-spratt-pKpipZVVEC0-unsplash.jpg");
   background-position: center; */
-  color: #373d4f;
+  color: var(--text-color);
   font-size: 30px;
   font-weight: 600;
 }
 
-a {
+body.night {
+  --background-color: #191a19;
+  --text-color: #4e9f3d;
+  --heading-color: #191a19;
+  --clock-border-color: #4e9f3d;
+  --clock-body-color: #191a19;
+  --clock-face-color: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(50, 50, 50) 0%,
+    rgb(0, 0, 0) 99.4%
+  );
+  --clock-numbers-color: #373d4f;
+  --clockHand-background-color: #4e9f3d;
+  --clockSecondHand-background-color: #d8e9a8;
+  --transition-delay: 1s;
+}
+
+body.powerPuff {
+}
+
+body.rowdyRough {
+}
+
+a.link-dark {
   text-decoration: none;
-  color: #373d4f;
+  color: var(--text-color);
 }
 
 .clockBorder {
-  border: 15px outset #a3c6ba;
-  max-width: 600px;
+  border: 15px outset var(--clock-border-color);
+  max-width: 575px;
 }
 
 .clockBody {
