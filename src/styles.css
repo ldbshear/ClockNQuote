@@ -20,8 +20,12 @@ a {
   color: #373d4f;
 }
 
-.clockBody,
 .clockBorder {
+  border: 15px outset #a3c6ba;
+  max-width: 600px;
+}
+
+.clockBody {
   background-color: #f0f5f8;
 }
 
@@ -124,5 +128,8 @@ a {
 }
 
 .timeHints {
+  background-color: #f0f5f8;
   padding: 10px;
+  border: 8px solid #a3c6ba;
+  margin: 10px;
 }

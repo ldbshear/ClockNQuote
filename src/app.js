@@ -139,7 +139,6 @@ function helpfulClock() {
 }
 
 const userCardTemplate = document.querySelector("[data-user-template]");
-
 const userCardContainer = document.querySelector("[data-user-cards-container]");
 
 let getQuote = document.getElementById("thought");
