@@ -30,19 +30,25 @@ body.night {
   --text-color: #4e9f3d;
   --heading-color: #191a19;
   --clock-border-color: #4e9f3d;
-  --clock-body-color: #191a19;
+  --clock-body-color: #262726;
   --clock-face-color: radial-gradient(
     circle at 24.1% 68.8%,
     rgb(50, 50, 50) 0%,
     rgb(0, 0, 0) 99.4%
   );
-  --clock-numbers-color: #373d4f;
+  --clock-numbers-color: #4e9f3d;
   --clockHand-background-color: #4e9f3d;
   --clockSecondHand-background-color: #d8e9a8;
   --transition-delay: 1s;
 }
 
 body.powerPuff {
+  --background-color: #191a19;
+  --clock-face-color: linear-gradient(
+    123.5deg,
+    rgb(244, 219, 251) 29.3%,
+    rgb(255, 214, 214) 67.1%
+  );
 }
 
 body.rowdyRough {
@@ -53,21 +59,22 @@ a.link-dark {
   color: var(--text-color);
 }
 
-.clockBorder {
-  border: 15px outset var(--clock-border-color);
-  max-width: 575px;
+.card {
+  background-color: var(--background-color);
 }
 
-.clockBody {
-  background-color: #f0f5f8;
+.clockBorder {
+  margin: 0;
+  border: 15px outset var(--clock-border-color);
+  max-width: 575px;
 }
 
 .clock {
   width: 400px;
   height: 400px;
-  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+  background: linear-gradient(to top, #dfe9f3 0%, var(--clock-face-color) 100%);
   border-radius: 50%;
-  border: 15px outset #a3c6ba;
+  border: 15px outset var(--clock-border-color);
   position: relative;
 }
 
@@ -75,10 +82,15 @@ a.link-dark {
   position: absolute;
   width: 100%;
   height: 100%;
-  color: #373d4f;
   text-align: center;
   transform: rotate(0);
   font-size: 1.5rem;
+}
+
+.number,
+.hourMins,
+.dayMonthYear {
+  color: var(--clock-numbers-color);
 }
 
 #num1 {
@@ -120,8 +132,7 @@ a.link-dark {
   position: absolute;
   bottom: 50%;
   left: 50%;
-  background-color: black;
-  border: 1px solid white;
+  background-color: var(--clockHand-background-color);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   z-index: 10;
@@ -132,7 +143,7 @@ a.link-dark {
 .clock::after {
   content: "";
   position: absolute;
-  background-color: black;
+  background-color: var(--clockHand-background-color);
   border-radius: 50%;
   z-index: 11;
   width: 15px;
@@ -145,24 +156,29 @@ a.link-dark {
 .clock .hand.second {
   width: 3px;
   height: 45%;
-  background-color: red;
+  background-color: var(--clockSecondHand-background-color);
 }
 
 .clock .hand.minute {
   width: 7px;
   height: 40%;
-  background-color: black;
+  background-color: var(--clockHand-background-color);
 }
 
 .clock .hand.hour {
   width: 10px;
   height: 35%;
-  background-color: black;
+  background-color: var(--clockHand-background-color);
+}
+
+.clockBody,
+.timeHintsContainer,
+.timeHints {
+  background-color: var(--clock-body-color);
 }
 
 .timeHints {
-  background-color: #f0f5f8;
   padding: 10px;
-  border: 8px solid #a3c6ba;
+  border: 8px solid var(--clock-border-color);
   margin: 10px;
 }

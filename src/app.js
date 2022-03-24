@@ -3,6 +3,11 @@ document.querySelector("#dark").addEventListener("click", () => {
   document.body.classList.toggle("night");
 });
 
+document.querySelector("#cute").addEventListener("click", () => {
+  document.body.classList.toggle("powerPuff");
+  console.log("Power Puff girls");
+});
+
 //Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();
