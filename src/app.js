@@ -8,6 +8,10 @@ document.querySelector("#cute").addEventListener("click", () => {
   console.log("Power Puff girls");
 });
 
+document.querySelector("#rough").addEventListener("click", () => {
+  document.body.classList.toggle("rowdyRuff");
+});
+
 //Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();
@@ -109,7 +113,7 @@ function helpfulClock() {
     helpMins = "0" + helpMins;
   }
 
-  if (helpMins === "0") {
+  if (helpMins === "00") {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is ${helpHours} o'clock`;
   } else if (helpMins === "05") {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is five past the hour. Or five minutes past the hour of ${helpHours}.`;

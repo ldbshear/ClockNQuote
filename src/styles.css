@@ -58,7 +58,21 @@ body.powerPuff {
   --clockSecondHand-background-color: #8548ed;
 }
 
-body.rowdyRough {
+body.rowdyRuff {
+  --background-color: #383838;
+  --clock-border-color: #aeb6c1;
+  --clock-body-color: #47505c;
+  --clock-face-color: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(110, 136, 161) 90.2%
+  );
+  --heading-color: #383838;
+  --text-color: #aeb6c1;
+  --clock-numbers-color: #383838;
+  --calendar-font-color: #aeb6c1;
+  --clockHand-background-color: #383838;
+  --clockSecondHand-background-color: #47505c;
 }
 
 a.link-dark {
@@ -178,6 +192,10 @@ a.link-dark {
   width: 10px;
   height: 35%;
   background-color: var(--clockHand-background-color);
+}
+
+.calendar {
+  color: var(--calendar-font-color);
 }
 
 .clockBody,
