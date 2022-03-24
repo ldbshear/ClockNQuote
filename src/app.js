@@ -109,7 +109,7 @@ function helpfulClock() {
     helpMins = "0" + helpMins;
   }
 
-  if (helpMins === 0) {
+  if (helpMins === "0") {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is ${helpHours} o'clock`;
   } else if (helpMins === "05") {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is five past the hour. Or five minutes past the hour of ${helpHours}.`;

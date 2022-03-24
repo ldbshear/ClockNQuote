@@ -43,12 +43,18 @@ body.night {
 }
 
 body.powerPuff {
-  --background-color: #191a19;
+  --background-color: #f6ebfd;
+  --heading-color: #7631eb;
+  --clock-border-color: #f275a4;
+  --clock-body-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
   --clock-face-color: linear-gradient(
     123.5deg,
     rgb(244, 219, 251) 29.3%,
     rgb(255, 214, 214) 67.1%
   );
+  --clock-numbers-color: #7631eb;
+  --clockHand-background-color: #7631eb;
+  --clockSecondHand-background-color: #8548ed;
 }
 
 body.rowdyRough {
@@ -72,7 +78,7 @@ a.link-dark {
 .clock {
   width: 400px;
   height: 400px;
-  background: linear-gradient(to top, #dfe9f3 0%, var(--clock-face-color) 100%);
+  background: var(--clock-face-color);
   border-radius: 50%;
   border: 15px outset var(--clock-border-color);
   position: relative;
