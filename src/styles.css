@@ -13,7 +13,7 @@ body {
   --clock-numbers-color: #373d4f;
   --clockHand-background-color: black;
   --clockSecondHand-background-color: red;
-  --transition-delay: 1s;
+  --transition-delay: 0.75s;
   min-height: 100vh;
   background-color: var(--background-color);
   margin: 0;
@@ -23,6 +23,7 @@ body {
   color: var(--text-color);
   font-size: 30px;
   font-weight: 600;
+  transition: var(--transition-delay);
 }
 
 body.night {
@@ -39,12 +40,12 @@ body.night {
   --clock-numbers-color: #4e9f3d;
   --clockHand-background-color: #4e9f3d;
   --clockSecondHand-background-color: #d8e9a8;
-  --transition-delay: 1s;
 }
 
 body.powerPuff {
   --background-color: #f6ebfd;
   --heading-color: #7631eb;
+  --text-color: #7631eb;
   --clock-border-color: #f275a4;
   --clock-body-color: linear-gradient(to top, #dfe9f3 0%, white 100%);
   --clock-face-color: linear-gradient(
@@ -67,12 +68,13 @@ a.link-dark {
 
 .card {
   background-color: var(--background-color);
+  transition: var(--transition-delay);
 }
 
 .clockBorder {
   margin: 0;
   border: 15px outset var(--clock-border-color);
-  max-width: 575px;
+  max-width: 550px;
 }
 
 .clock {
@@ -82,6 +84,7 @@ a.link-dark {
   border-radius: 50%;
   border: 15px outset var(--clock-border-color);
   position: relative;
+  transition: var(--transition-delay);
 }
 
 .clock .number {
