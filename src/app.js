@@ -126,15 +126,29 @@ function helpfulClock() {
   } else if (helpMins === 25) {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it's twenty-five past the hour. Or it's twenty-five past ${helpHours}.`;
   } else if (helpMins === 30) {
-    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it's half past the hour. Or it's half past ${helpHours}.`;
+    if (helpHours < 12) {
+      extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is twenty to the hour. Or it's twenty to ${
+        helpHours + 1
+      }.`;
+    } else {
+      extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is twenty to the hour. Or it's twenty to ${
+        helpHours - helpHours + 1
+      }.`;
+    }
   } else if (helpMins === 35) {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it's twenty-five to the hour. Or it's twenty-five to ${
       helpHours + 1
     }.`;
   } else if (helpMins === 40) {
-    extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is twenty to the hour. Or it's twenty to ${
-      helpHours + 1
-    }.`;
+    if (helpHours < 12) {
+      extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is twenty to the hour. Or it's twenty to ${
+        helpHours + 1
+      }.`;
+    } else {
+      extraHelp.innerHTML = `When it is ${helpHours}:${helpMins}<br/> you can say it is twenty to the hour. Or it's twenty to ${
+        helpHours - helpHours + 1
+      }.`;
+    }
   } else if (helpMins === 45) {
     extraHelp.innerHTML = `When it is ${helpHours}:${helpMins} you can say it is a quarter to the hour. Or it's a quarter to ${
       helpHours + 1
