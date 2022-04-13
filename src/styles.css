@@ -213,4 +213,5 @@ a.link-dark {
 #quoteHolder {
   background: var(--background-color);
   color: var(--text-color);
+  border: 15px outset var(--clock-border-color);
 }
