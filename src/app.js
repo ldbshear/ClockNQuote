@@ -12,6 +12,10 @@ document.querySelector("#rough").addEventListener("click", () => {
   document.body.classList.toggle("rowdyRuff");
 });
 
+document.querySelector("#gems").addEventListener("click", () => {
+  document.body.classList.toggle("jewels");
+});
+
 //Next two functions get day and month from js date and display them, using arrays
 function digitalClock() {
   let kidClock = new Date();

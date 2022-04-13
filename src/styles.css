@@ -18,8 +18,6 @@ body {
   background-color: var(--background-color);
   margin: 0;
   overflow-x: hidden;
-  /* background-image: url("../images/annie-spratt-pKpipZVVEC0-unsplash.jpg");
-  background-position: center; */
   color: var(--text-color);
   font-size: 30px;
   font-weight: 600;
@@ -73,6 +71,23 @@ body.rowdyRuff {
   --calendar-font-color: #aeb6c1;
   --clockHand-background-color: #383838;
   --clockSecondHand-background-color: #47505c;
+}
+
+body.jewels {
+  --background-color: #280f34;
+  --clock-border-color: #56206f;
+  --clock-body-color: #371547;
+  --clock-face-color: linear-gradient(
+    180.3deg,
+    rgb(221, 221, 221) 5.5%,
+    rgb(132, 49, 170) 90.2%
+  );
+  --heading-color: #280f34;
+  --text-color: #b30753;
+  --clock-numbers-color: #280f34;
+  --calendar-font-color: #b30753;
+  --clockHand-background-color: #280f34;
+  --clockSecondHand-background-color: #b30753;
 }
 
 a.link-dark {
