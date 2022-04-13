@@ -209,3 +209,8 @@ a.link-dark {
   border: 8px solid var(--clock-border-color);
   margin: 10px;
 }
+
+#quoteHolder {
+  background: var(--background-color);
+  color: var(--text-color);
+}
